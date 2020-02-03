@@ -48,7 +48,7 @@ defmodule CodeFlow.Railway do
     {:error, "User #{inspect(name)} is blacklisted"}
   end
 
-  def check_name_blacklist({:ok, %User{name: name} = user}) do
+  def check_name_blacklist({:ok, %User{name: _name} = user}) do
     {:ok, user}
   end
 
